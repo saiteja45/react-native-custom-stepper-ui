@@ -1,12 +1,18 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-custom-stepper-ui';
-
-const result = multiply(3, 7);
+import { StepperX } from 'react-native-custom-stepper-ui';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <StepperX
+        steps={[
+          { label: 'Step 1', content: <Text>Step 1 Content</Text> },
+          { label: 'Step 2', content: <Text>Step 2 Content</Text> },
+          { label: 'Step 3', content: <Text>Step 3 Content</Text> },
+        ]}
+        orientation="horizontal" // Change to 'horizontal' for a horizontal layout
+        onComplete={() => console.log('yes completed')}
+      />
     </View>
   );
 }
@@ -14,7 +20,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
