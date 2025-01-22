@@ -41,7 +41,7 @@ const SimpleStepper: React.FC<SimpleStepperProps> = ({
           orientation === 'vertical' && styles.verticalStepperContainer,
         ]}
       >
-        {steps.map((step, index) => (
+        {steps.map((_step, index) => (
           <React.Fragment key={index}>
             <View
               style={[

@@ -10,7 +10,7 @@ export default function App() {
           { label: 'Step 2', content: <Text>Step 2 Content</Text> },
           { label: 'Step 3', content: <Text>Step 3 Content</Text> },
         ]}
-        orientation="horizontal" // Change to 'horizontal' for a horizontal layout
+        orientation="vertical" // Change to 'horizontal' for a horizontal layout
         onComplete={() => console.log('yes completed')}
       />
     </View>
