@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 interface Step {
   label: string;
+  content: React.ReactNode;
 }
 
 interface SimpleStepperProps {
