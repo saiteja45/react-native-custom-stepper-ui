@@ -2,21 +2,35 @@
 
 stepper ui for mobile ios and android
 
+
 ## Installation
 
 ```sh
 npm install react-native-custom-stepper-ui
 ```
 
+```sh
+yarn add react-native-custom-stepper-ui
+```
+
 ## Usage
 
 
 ```js
-import { multiply } from 'react-native-custom-stepper-ui';
+import { StepperX } from 'react-native-custom-stepper-ui';
+
 
 // ...
 
-const result = await multiply(3, 7);
+<StepperX
+        steps={[
+          { label: 'Step 1', content: <Text>Step 1 Content</Text> },
+          { label: 'Step 2', content: <Text>Step 2 Content</Text> },
+          { label: 'Step 3', content: <Text>Step 3 Content</Text> },
+        ]}
+        orientation="horizontal" // Change to 'horizontal' for a horizontal layout
+        onComplete={() => console.log('yes completed')}
+      />
 ```
 
 
@@ -27,6 +41,10 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
+
+## Issues
+
+please try this and if you need any reusable components need to be added please raise in issues.
 
 ---
 
